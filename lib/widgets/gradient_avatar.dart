@@ -8,7 +8,7 @@ class GradientAvatar extends StatelessWidget {
   final String name;
   final double size;
 
-  const GradientAvatar({super.key, required this.name, this.size = 44});
+  const GradientAvatar({super.key, required this.name, this.size = 40}); // radio 20
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +24,7 @@ class GradientAvatar extends StatelessWidget {
         initialsOf(name),
         style: const TextStyle(
           color: Colors.white,
+          fontSize: 14,
           fontWeight: FontWeight.w600,
         ),
       ),

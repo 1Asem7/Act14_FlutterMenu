@@ -13,12 +13,12 @@ void main() {
 
     // Cambia a Chats.
     await tester.tap(find.byIcon(Icons.chat_bubble_outline));
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(find.text('¿Nos vemos a las 5?'), findsOneWidget);
 
     // Cambia a Calls.
     await tester.tap(find.byIcon(Icons.call_outlined).last);
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(find.byIcon(Icons.call_missed), findsWidgets);
   });
 }
